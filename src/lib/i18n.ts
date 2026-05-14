@@ -31,4 +31,5 @@ export const translations = {
   },
 } as const;
 
-export type Dict = typeof translations.en;
+type DeepMutable<T> = { -readonly [K in keyof T]: T[K] extends object ? DeepMutable<T[K]> : T[K] };
+export type Dict = DeepMutable<typeof translations.en>;
