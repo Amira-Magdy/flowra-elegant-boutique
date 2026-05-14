@@ -45,8 +45,8 @@ export function ProductCard({ product }: { product: Product }) {
         <p className="text-xs uppercase tracking-widest text-muted-foreground">{product.category[lang]}</p>
         <h3 className="font-display text-lg mt-1">{product.name[lang]}</h3>
         <div className="flex items-baseline gap-2 mt-1 rtl:flex-row-reverse rtl:justify-end">
-          <span className="text-base">${product.price}</span>
-          {product.compareAt && <span className="text-sm text-muted-foreground line-through">${product.compareAt}</span>}
+          <span className="text-base">{formatPrice(product.price, lang)}</span>
+          {product.compareAt && <span className="text-sm text-muted-foreground line-through">{formatPrice(product.compareAt, lang)}</span>}
         </div>
       </div>
     </Link>
