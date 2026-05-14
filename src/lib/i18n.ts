@@ -1,6 +1,21 @@
 export type Lang = "en" | "ar";
 
-export const translations = {
+export type Dict = {
+  brand: string;
+  nav: { home: string; shop: string; bestSellers: string; newArrivals: string; offers: string; about: string; contact: string };
+  actions: { search: string; wishlist: string; cart: string; login: string; signup: string; logout: string; account: string; addToCart: string; buyNow: string; viewAll: string; checkout: string; continueShopping: string; remove: string };
+  hero: { eyebrow: string; title: string; subtitle: string; cta: string };
+  sections: { featured: string; best: string; new: string; offers: string; browse: string };
+  product: { color: string; size: string; quantity: string; description: string; related: string; inStock: string; off: string };
+  cart: { title: string; empty: string; subtotal: string; shipping: string; total: string; item: string; items: string };
+  wishlist: { title: string; empty: string };
+  auth: { loginTitle: string; signupTitle: string; email: string; password: string; name: string; noAccount: string; haveAccount: string };
+  footer: { tag: string; rights: string };
+  banner: string;
+  search: { placeholder: string; noResults: string };
+};
+
+export const translations: Record<Lang, Dict> = {
   en: {
     brand: "Flowra",
     nav: { home: "Home", shop: "Shop", bestSellers: "Best Sellers", newArrivals: "New Arrivals", offers: "Offers", about: "About", contact: "Contact" },
