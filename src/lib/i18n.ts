@@ -27,7 +27,7 @@ export const translations: Record<Lang, Dict> = {
     wishlist: { title: "Your Wishlist", empty: "Your wishlist is empty" },
     auth: { loginTitle: "Welcome Back", signupTitle: "Create Account", email: "Email", password: "Password", name: "Name", noAccount: "No account?", haveAccount: "Have an account?" },
     footer: { tag: "Timeless elegance, crafted for you.", rights: "All rights reserved." },
-    banner: "Free worldwide shipping on orders over $200",
+    banner: "Free shipping on orders over 5,000 EGP",
     search: { placeholder: "Search products...", noResults: "No products found" },
   },
   ar: {
@@ -41,7 +41,16 @@ export const translations: Record<Lang, Dict> = {
     wishlist: { title: "المفضلة", empty: "قائمة المفضلة فارغة" },
     auth: { loginTitle: "مرحباً بعودتك", signupTitle: "إنشاء حساب", email: "البريد الإلكتروني", password: "كلمة المرور", name: "الاسم", noAccount: "ليس لديك حساب؟", haveAccount: "لديك حساب؟" },
     footer: { tag: "أناقة خالدة، صُممت من أجلك.", rights: "جميع الحقوق محفوظة." },
-    banner: "شحن مجاني حول العالم للطلبات فوق 200$",
+    banner: "شحن مجاني للطلبات فوق ٥٠٠٠ ج.م",
     search: { placeholder: "ابحث عن منتجات...", noResults: "لا توجد منتجات" },
   },
 };
+
+const arDigits = (n: string) => n.replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[+d]);
+
+export function formatPrice(amount: number, lang: Lang): string {
+  const rounded = Math.round(amount);
+  const grouped = rounded.toLocaleString("en-US");
+  if (lang === "ar") return `${arDigits(grouped)} ج.م`;
+  return `${grouped} EGP`;
+}
