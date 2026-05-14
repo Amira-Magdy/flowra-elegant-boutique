@@ -20,7 +20,8 @@ export const Route = createFileRoute("/product/$slug")({
 });
 
 function ProductPage() {
-  const { product } = Route.useLoaderData();
+  const data = Route.useLoaderData() as { product: import("@/lib/products").Product };
+  const product = data.product;
   const { t, lang, addToCart, wishlist, toggleWishlist } = useStore();
   const [color, setColor] = React.useState(product.colors[0].name);
   const [size, setSize] = React.useState(product.sizes[0]);
