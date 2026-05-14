@@ -50,8 +50,8 @@ function ProductPage() {
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">{product.category[lang]}</p>
           <h1 className="font-display text-4xl md:text-5xl mt-3">{product.name[lang]}</h1>
           <div className="flex items-baseline gap-3 mt-4">
-            <span className="text-2xl font-display">${product.price}</span>
-            {product.compareAt && <span className="text-base text-muted-foreground line-through">${product.compareAt}</span>}
+            <span className="text-2xl font-display">{formatPrice(product.price, lang)}</span>
+            {product.compareAt && <span className="text-base text-muted-foreground line-through">{formatPrice(product.compareAt, lang)}</span>}
             {product.compareAt && <span className="text-xs px-2 py-1 bg-[var(--burgundy)] text-white rounded">-{Math.round((1 - product.price / product.compareAt) * 100)}% {t.product.off}</span>}
           </div>
           <p className="mt-6 text-muted-foreground leading-relaxed">{product.description[lang]}</p>
