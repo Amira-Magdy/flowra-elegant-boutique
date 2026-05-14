@@ -44,7 +44,4 @@ export const translations: Record<Lang, Dict> = {
     banner: "شحن مجاني حول العالم للطلبات فوق 200$",
     search: { placeholder: "ابحث عن منتجات...", noResults: "لا توجد منتجات" },
   },
-} as const;
-
-type DeepMutable<T> = { -readonly [K in keyof T]: T[K] extends object ? DeepMutable<T[K]> : T[K] };
-export type Dict = DeepMutable<typeof translations.en>;
+};
