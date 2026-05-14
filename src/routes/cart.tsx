@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
+import { formatPrice } from "@/lib/i18n";
 import { products } from "@/lib/products";
 import { ProductImage } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
@@ -40,7 +41,7 @@ function Cart() {
                       <span className="w-8 text-center text-sm">{item.qty}</span>
                       <button className="size-8 grid place-items-center" onClick={() => updateQty(idx, item.qty + 1)}><Plus className="size-3" /></button>
                     </div>
-                    <span className="text-base">${(p.price * item.qty).toFixed(2)}</span>
+                    <span className="text-base">{formatPrice(p.price * item.qty, lang)}</span>
                   </div>
                 </div>
                 <button onClick={() => removeFromCart(idx)} className="size-8 grid place-items-center text-muted-foreground hover:text-foreground"><X className="size-4" /></button>
@@ -51,9 +52,9 @@ function Cart() {
       </div>
       <aside className="bg-secondary/50 rounded-xl p-6 h-fit lg:sticky lg:top-24">
         <h2 className="font-display text-2xl mb-4">Summary</h2>
-        <div className="flex justify-between text-sm py-2"><span>{t.cart.subtotal}</span><span>${cartTotal.toFixed(2)}</span></div>
+        <div className="flex justify-between text-sm py-2"><span>{t.cart.subtotal}</span><span>{formatPrice(cartTotal, lang)}</span></div>
         <div className="flex justify-between text-sm py-2 text-muted-foreground"><span>{t.cart.shipping}</span><span>—</span></div>
-        <div className="flex justify-between text-base font-medium py-3 border-t border-border mt-2"><span>{t.cart.total}</span><span>${cartTotal.toFixed(2)}</span></div>
+        <div className="flex justify-between text-base font-medium py-3 border-t border-border mt-2"><span>{t.cart.total}</span><span>{formatPrice(cartTotal, lang)}</span></div>
         <Button className="w-full mt-4 bg-[var(--burgundy)] hover:bg-[var(--burgundy)]/90 text-white rounded-full h-12 tracking-widest uppercase text-xs">{t.actions.checkout}</Button>
       </aside>
     </div>
