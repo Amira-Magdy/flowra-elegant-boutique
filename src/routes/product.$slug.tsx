@@ -2,6 +2,7 @@ import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { getProduct, products } from "@/lib/products";
 import { ProductImage, ProductCard } from "@/components/product-card";
 import { useStore } from "@/lib/store";
+import { formatPrice } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import { Heart, Minus, Plus } from "lucide-react";
 import * as React from "react";
