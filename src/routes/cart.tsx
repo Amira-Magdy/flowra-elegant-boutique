@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useStore } from "@/lib/store";
+import { formatPrice } from "@/lib/i18n";
 import { products } from "@/lib/products";
 import { ProductImage } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
