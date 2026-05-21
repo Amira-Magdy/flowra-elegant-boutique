@@ -3,7 +3,7 @@ export type Lang = "en" | "ar";
 export type Dict = {
   brand: string;
   nav: { home: string; shop: string; bestSellers: string; newArrivals: string; offers: string; about: string; contact: string };
-  actions: { search: string; wishlist: string; cart: string; login: string; signup: string; logout: string; account: string; addToCart: string; buyNow: string; viewAll: string; checkout: string; continueShopping: string; remove: string };
+  actions: { search: string; wishlist: string; cart: string; login: string; signup: string; logout: string; account: string; addToCart: string; buyNow: string; viewAll: string; checkout: string; continueShopping: string; remove: string; theme: string };
   hero: { eyebrow: string; title: string; subtitle: string; cta: string };
   sections: { featured: string; best: string; new: string; offers: string; browse: string };
   product: { color: string; size: string; quantity: string; description: string; related: string; inStock: string; off: string };
@@ -13,6 +13,13 @@ export type Dict = {
   footer: { tag: string; rights: string };
   banner: string;
   search: { placeholder: string; noResults: string };
+  checkout: {
+    title: string; summary: string; shipping: string; tax: string; total: string;
+    fullName: string; email: string; address: string; phone: string; phone2: string;
+    paymentMethod: string; cod: string; bank: string; uploadReceipt: string; placeOrder: string;
+    successTitle: string; successMsg: string; backHome: string;
+    bankInfo: string; required: string;
+  };
 };
 
 export const translations: Record<Lang, Dict> = {
