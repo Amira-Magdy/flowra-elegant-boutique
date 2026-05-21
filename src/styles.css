@@ -57,9 +57,10 @@
   --input: oklch(0.92 0.02 20);
   --ring: oklch(0.50 0.10 15);
 
-  --rose-soft: oklch(0.94 0.04 10);
-  --rose-blush: oklch(0.88 0.07 10);
+  --rose-soft: oklch(0.78 0.065 18);
+  --rose-blush: oklch(0.84 0.075 15);
   --burgundy: oklch(0.32 0.10 15);
+  --rose-soft-fg: oklch(0.22 0.05 18);
 }
 
 .dark {

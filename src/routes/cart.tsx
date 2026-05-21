@@ -55,7 +55,7 @@ function Cart() {
         <div className="flex justify-between text-sm py-2"><span>{t.cart.subtotal}</span><span>{formatPrice(cartTotal, lang)}</span></div>
         <div className="flex justify-between text-sm py-2 text-muted-foreground"><span>{t.cart.shipping}</span><span>—</span></div>
         <div className="flex justify-between text-base font-medium py-3 border-t border-border mt-2"><span>{t.cart.total}</span><span>{formatPrice(cartTotal, lang)}</span></div>
-        <Button className="w-full mt-4 bg-[var(--burgundy)] hover:bg-[var(--burgundy)]/90 text-white rounded-full h-12 tracking-widest uppercase text-xs">{t.actions.checkout}</Button>
+        <Button asChild className="w-full mt-4 bg-[var(--burgundy)] hover:bg-[var(--burgundy)]/90 text-white rounded-full h-12 tracking-widest uppercase text-xs"><Link to="/checkout">{t.actions.checkout}</Link></Button>
       </aside>
     </div>
   );
