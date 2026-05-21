@@ -44,13 +44,6 @@ export const translations: Record<Lang, Dict> = {
       bankInfo: "Bank: Flowra Bank · Account: 1234-5678-9012 · IBAN: EG00 0000 0000 0000",
       required: "This field is required",
     },
-    product: { color: "Color", size: "Size", quantity: "Quantity", description: "Description", related: "You may also like", inStock: "In stock", off: "OFF" },
-    cart: { title: "Your Cart", empty: "Your cart is empty", subtotal: "Subtotal", shipping: "Free shipping", total: "Total", item: "item", items: "items" },
-    wishlist: { title: "Your Wishlist", empty: "Your wishlist is empty" },
-    auth: { loginTitle: "Welcome Back", signupTitle: "Create Account", email: "Email", password: "Password", name: "Name", noAccount: "No account?", haveAccount: "Have an account?" },
-    footer: { tag: "Timeless elegance, crafted for you.", rights: "All rights reserved." },
-    banner: "Free shipping on orders over 5,000 EGP",
-    search: { placeholder: "Search products...", noResults: "No products found" },
   },
   ar: {
     brand: "فلورا",
