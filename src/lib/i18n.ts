@@ -48,7 +48,7 @@ export const translations: Record<Lang, Dict> = {
   ar: {
     brand: "فلورا",
     nav: { home: "الرئيسية", shop: "المتجر", bestSellers: "الأكثر مبيعاً", newArrivals: "وصل حديثاً", offers: "العروض", about: "من نحن", contact: "تواصل" },
-    actions: { search: "بحث", wishlist: "المفضلة", cart: "السلة", login: "تسجيل الدخول", signup: "إنشاء حساب", logout: "خروج", account: "حسابي", addToCart: "أضف إلى السلة", buyNow: "اشترِ الآن", viewAll: "عرض الكل", checkout: "إتمام الشراء", continueShopping: "متابعة التسوق", remove: "إزالة" },
+    actions: { search: "بحث", wishlist: "المفضلة", cart: "السلة", login: "تسجيل الدخول", signup: "إنشاء حساب", logout: "خروج", account: "حسابي", addToCart: "أضف إلى السلة", buyNow: "اشترِ الآن", viewAll: "عرض الكل", checkout: "إتمام الشراء", continueShopping: "متابعة التسوق", remove: "إزالة", theme: "المظهر" },
     hero: { eyebrow: "مجموعة فلورا", title: "أناقة الأميرات", subtitle: "كل ما تحتاجينه لمناسباتك", cta: "تسوقي الآن" },
     sections: { featured: "المجموعة المميزة", best: "الأكثر مبيعاً", new: "وصل حديثاً", offers: "عروض خاصة", browse: "تصفحي الكل" },
     product: { color: "اللون", size: "المقاس", quantity: "الكمية", description: "الوصف", related: "قد يعجبك أيضاً", inStock: "متوفر", off: "خصم" },
@@ -58,6 +58,14 @@ export const translations: Record<Lang, Dict> = {
     footer: { tag: "أناقة خالدة، صُممت من أجلك.", rights: "جميع الحقوق محفوظة." },
     banner: "شحن مجاني للطلبات فوق ٥٠٠٠ ج.م",
     search: { placeholder: "ابحث عن منتجات...", noResults: "لا توجد منتجات" },
+    checkout: {
+      title: "إتمام الشراء", summary: "ملخص الطلب", shipping: "الشحن والضرائب", tax: "ضريبة", total: "الإجمالي",
+      fullName: "الاسم بالكامل", email: "البريد الإلكتروني", address: "عنوان الشحن بالتفصيل", phone: "رقم الهاتف الأساسي", phone2: "رقم هاتف بديل",
+      paymentMethod: "طريقة الدفع", cod: "الدفع عند الاستلام", bank: "تحويل بنكي", uploadReceipt: "يرجى رفع صورة الإيصال", placeOrder: "تأكيد الطلب",
+      successTitle: "تم طلب الأوردر بنجاح!", successMsg: "شكراً لتسوقك مع فلورا. سنتواصل معك قريباً لتأكيد طلبك.", backHome: "العودة للرئيسية",
+      bankInfo: "البنك: فلورا · الحساب: ١٢٣٤-٥٦٧٨-٩٠١٢ · IBAN: EG00 0000 0000 0000",
+      required: "هذا الحقل مطلوب",
+    },
   },
 };
 
