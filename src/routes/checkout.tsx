@@ -126,7 +126,7 @@ function Checkout() {
               )}
             </section>
 
-            <Button type="submit" className="w-full bg-[var(--burgundy)] hover:bg-[var(--burgundy)]/90 text-white rounded-full h-13 tracking-widest uppercase text-xs h-12">
+            <Button type="submit" className="w-full bg-[var(--burgundy)] hover:bg-[var(--burgundy)]/90 text-white rounded-full tracking-widest uppercase text-xs h-12">
               {t.checkout.placeOrder}
             </Button>
           </div>
